@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestor de inventario doméstico</title>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <h1>Gestor de inventario doméstico</h1>
+
+        <!-- formulario -->
+        <form id="formulario-producto">
+            <label for="nombre">Nombre del artículo:</label>
+            <input type="text" id="nombre" required>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" required>
+            <button type="submit">Agregar artículo</button>
+        </form>
+
+        <div id="mensaje-error" class="oculto"></div>
+
+        <label for="filtro-categoria">Filtrar por categoría:</label>
+        <select id="filtro-categoria">
+            <option value="todas">todas</option>
+        </select>
+
+        <div id="indicadores">
+            <p>Total productos: <span id="total-productos">0</span></p>
+            <p>Total Unidades: <span id="total-unidades">0</span></p>
+            <p>Valor total: $<span id="valor-total">0</span></p>
+            <p>Total Agotados: <span id="total-agotados">0</span></p>
+        </div>
+
+        <!-- tabla de inventario -->
+         <table>
+            <thead>
+                <tr>
+                    <th>Nombre del artículo</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                    <th>Estado</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-inventario">
+            </tbody>
+         </table>
+
+         <div id="mensaje-vacio" class="oculto">No se encontraron artículos disponibles.</div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
